@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-p11);
+  padding: 12px 24px;
+}
+
+.titulo-logo {
+  color: #f7f7f7;
+}
+
+.btn-cadastro {
+  cursor: pointer;
+  background-color: var(--color-s02);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btn-cadastro a {
+  color: var(--color-s11);
+}
