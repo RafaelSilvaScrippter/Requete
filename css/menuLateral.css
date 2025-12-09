@@ -1,0 +1,60 @@
+.menu-lateral {
+  position: relative;
+  background-color: var(--color-p09);
+}
+
+.li-tables::before {
+  content: url("../imgs/tablesIcon.svg");
+}
+
+.li-tables {
+  border-bottom: 1px solid var(--color-p08);
+}
+
+.li-tables-item {
+  padding-left: 22px;
+  color: var(--color-p05);
+}
+
+.li-tables-item::before {
+  content: url("../imgs/subIcon.svg");
+}
+
+.icone-config {
+  position: absolute;
+  right: 20px;
+  bottom: 110px;
+  cursor: pointer;
+}
+
+.secao-queries {
+  background-color: var(--color-p08);
+  height: 60vh;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.terminal {
+  border-left: 1px solid var(--color-p08);
+  background-color: var(--color-p09);
+  height: 40vh;
+}
+
+.secao-queries {
+  display: grid;
+}
+.btn-run {
+  margin-right: 24px;
+  margin-bottom: 20px;
+  place-self: end;
+}
+
+.btn-run button {
+  padding: 12px 32px;
+  border-radius: 8px;
+  background-color: var(--color-s08);
+  text-transform: uppercase;
+}
