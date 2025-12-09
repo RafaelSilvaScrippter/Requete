@@ -1,9 +1,12 @@
 .header {
+  background-color: var(--color-p11);
+  padding: 12px 24px;
+}
+
+.flex-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-p11);
-  padding: 12px 24px;
 }
 
 .titulo-logo {
