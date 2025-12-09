@@ -1,0 +1,33 @@
+/* CORES PRIMARIA */
+
+:root {
+  --color-p12: #050804;
+  --color-p11: #0f170e;
+  --color-p10: #161f15;
+  --color-p09: #1b211a;
+  --color-p08: #313a30;
+  --color-p07: #434a42;
+  --color-p06: #585f57;
+  --color-p05: #767975;
+  --color-p04: #a3a3a3;
+  --color-p03: #bdbdbd;
+  --color-p02: #cecece;
+  --color-p01: #e8e8e8;
+}
+
+/* COR SECUNDÁRIA */
+:root {
+  --color-s12: #873103;
+  --color-s11: #943604;
+  --color-s10: #b5460a;
+  --color-s09: #c04e12;
+  --color-s08: #d85916;
+  --color-s07: #e06421;
+  --color-s06: #ff6d1f;
+  --color-s05: #f37e40;
+  --color-s04: #ef8f5c;
+  --color-s03: #f6a77c;
+  --color-s02: #ffbd9a;
+  --color-s01: #ffd5be;
+  --color-s00: #ffe8db;
+}
