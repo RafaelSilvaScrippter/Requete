@@ -30,6 +30,7 @@
 .secao-queries {
   background-color: var(--color-p08);
   height: 60vh;
+  overflow: scroll;
 }
 
 .grid-main {
@@ -50,6 +51,7 @@
   margin-right: 24px;
   margin-bottom: 20px;
   place-self: end;
+  position: absolute;
 }
 
 .btn-run button {

@@ -1,0 +1,26 @@
+#queryes {
+  background-color: var(--color-p08);
+  border: none;
+  outline: none;
+  padding-left: 22px;
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.linhas-text-area {
+  font-family: var(--font-secundararia);
+  line-height: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.secao-queries {
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.data-div-contador {
+  grid-column: 1;
+}
