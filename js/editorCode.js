@@ -1,23 +1,16 @@
 export default function editorDeCodigo() {
-  const textArea = document.querySelector("[data-text-area]");
-  const dataDivContador = document.querySelector("[data-div-contador]");
+  const dataEditor = document.querySelector("[data-editor]");
+  const divContador = document.querySelector("[data-div-contador]");
+  dataEditor.addEventListener("input", criarElementos);
 
-  textArea.addEventListener("input", atualizarLinhas);
-
-  function atualizarLinhas() {
-    const linhas = textArea.value.split("\n").length;
-
-    // limpa todos os spans
-    dataDivContador.innerHTML = "";
-
-    // recria todos os números
-    for (let i = 1; i <= linhas; i++) {
-      const span = document.createElement("span");
-      span.classList.add("linhas-text-area");
-      span.innerText = i;
-      dataDivContador.appendChild(span);
+  function criarElementos() {
+    divContador.innerHTML = "";
+    const divChilds = dataEditor.querySelectorAll("div");
+    for (let i = 1; i <= divChilds.length; i++) {
+      const criarSpans = document.createElement("span");
+      divContador.appendChild(criarSpans);
+      criarSpans.classList.add("contador-linhas");
+      criarSpans.innerText = i;
     }
   }
-
-  atualizarLinhas();
 }

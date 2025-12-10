@@ -1,0 +1,25 @@
+.secao-queries {
+  grid-template-columns: 50px auto;
+}
+
+.editor-code {
+  padding-left: 0.35rem;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  outline: none;
+  font-family: var(--font-secundaria);
+}
+
+.editor-code div {
+  line-height: 2rem;
+  font-size: 1.3rem;
+  padding-top: 0.4rem;
+}
+
+.contador-linhas {
+  padding-left: 0.75rem;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  padding-top: 0.4rem;
+  font-family: var(--font-secundaria);
+}
