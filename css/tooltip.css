@@ -1,0 +1,11 @@
+.config-tooltip {
+  background-color: var(--color-s08);
+  padding: 8px 10px;
+  border-radius: 8px;
+  width: 30vw;
+  color: #f7f7f7;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 30px;
+  font-family: var(--font-secundaria);
+}
