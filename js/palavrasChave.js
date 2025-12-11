@@ -8,11 +8,11 @@ export function palavrasChave() {
   }
   dataEditor.addEventListener("keyup", (e) => {
     if (e.key === "Enter") {
+      limparTextNodes(dataEditor);
       valoresQuery = dataEditor.innerText.split("\n");
       const transformarArray = Array.from(valoresQuery);
       const separar = transformarArray.map((item) => item.split(" "));
       divsInserir = dataEditor.querySelectorAll("div");
-
       separar.forEach((query, index) => {
         if (!divsInserir[index]) return;
         divsInserir[index].innerHTML = "";
@@ -22,4 +22,11 @@ export function palavrasChave() {
       });
     }
   });
+  function limparTextNodes(elemento) {
+    [...elemento.childNodes].forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        elemento.firstChild.style.display = "none";
+      }
+    });
+  }
 }
