@@ -22,10 +22,17 @@ export function palavrasChave() {
       });
     }
   });
+
+  function criarDiv() {
+    const criarDiv = document.createElement("div");
+    dataEditor.appendChild(criarDiv);
+  }
+  criarDiv();
+
   function limparTextNodes(elemento) {
     [...elemento.childNodes].forEach((node) => {
       if (node.nodeType === Node.TEXT_NODE) {
-        elemento.firstChild.style.display = "none";
+        console.log(elemento);
       }
     });
   }
