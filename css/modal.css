@@ -58,3 +58,18 @@
 .remove-modal {
   display: none;
 }
+
+.message-error {
+  color: var(--color-s08);
+  font-family: var(--font-secundaria);
+  font-size: 1.075rem;
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  gap: 6px;
+}
+
+.message-error::before {
+  content: url("../imgs/alertIcon.svg");
+  margin-right: 8px;
+}
