@@ -1,0 +1,60 @@
+.modal-items {
+  width: 50vw;
+  height: 60vh;
+  padding: 22px;
+  font-family: var(--font-primaria);
+  border-radius: 8px;
+  background-color: var(--color-p07);
+}
+.modal-container {
+  display: grid;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  height: 100vh;
+  align-content: center;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+}
+
+.inputs {
+  display: grid;
+  margin: 40px 0px;
+}
+
+.inputs input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  background-color: var(--color-p04);
+}
+
+.temas {
+  display: grid;
+}
+
+.temas label {
+  margin-bottom: 12px;
+}
+
+.temas select {
+  padding: 8px 12px;
+  background-color: var(--color-p04);
+  border-radius: 8px;
+}
+
+.btn-modal button {
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  margin-top: 24px;
+  place-self: end;
+  text-transform: uppercase;
+  font-family: var(--font-secundaria);
+  background-color: var(--color-s08);
+}
+
+.remove-modal {
+  display: none;
+}

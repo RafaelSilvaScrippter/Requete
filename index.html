@@ -16,6 +16,27 @@
 </head>
 
 <body>
+  <div data-modal-container class="modal-container">
+    <div data-modal-item class="modal-items">
+
+      <h2>REQUETE</h2>
+      <div class="inputs">
+        <label for="file">Banco de dados</label>
+        <input data-file type="file" id="file" name="file" class="file">
+      </div>
+      <div class="temas">
+        <label for="tema">Temas</label>
+        <select name="tema" id="tema">
+          <option disabled selected value="Tema editor">Seleciona o tema</option>
+          <option value="duotone-dark">Duotono Dark</option>
+          <option value="erlang-dark">Erlang Dark</option>
+        </select>
+      </div>
+      <div data-btn-modal class="btn-modal">
+        <button>Enviar</button>
+      </div>
+    </div>
+  </div>
   <header class="header">
     <div class="max-container flex-header">
       <h1 class="titulo-logo font-primaria">Logo</h1>
