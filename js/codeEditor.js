@@ -3,8 +3,12 @@ export function editorCode() {
 
   var editor = CodeMirror.fromTextArea(myTextArea, {
     lineNumbers: true,
-    mode: "javascript",
-    theme: "material",
+    extraKeys: {
+      "Ctrl-Space": "autocomplete",
+    },
+
+    mode: "text/x-sql",
+    theme: "darcula",
     lineWrapping: false,
   });
 }
