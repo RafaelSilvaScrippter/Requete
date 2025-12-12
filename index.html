@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="./vendor/codemirror/codemirror.css">
+  <link rel="stylesheet" href="./vendor/codemirror/darcula.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -32,10 +35,7 @@
     </div>
     <div class="grid-container-main">
       <div data-inserir-queries class="secao-queries">
-        <div data-div-contador>
-          <span class="contador-linhas">1</span>
-        </div>
-        <div data-editor contenteditable="true" class="editor-code"></div>
+        <textarea id="data-editor" data-editor class="editor-code"></textarea>
         <div class="btn-run">
           <button>run</button>
         </div>
@@ -43,6 +43,9 @@
       <div class="terminal"></div>
     </div>
   </main>
+
+  <script src="./vendor/codemirror/codemirror.js"></script>
+  <script src="./vendor/codemirror/javascript.js"></script>
   <script type="module" src="./script.js"></script>
 </body>
 

@@ -1,0 +1,17 @@
+.CodeMirror {
+  width: 100% !important;
+}
+.CodeMirror-scroll {
+  overflow-x: auto !important;
+}
+
+pre span {
+  margin-bottom: 6px;
+}
+
+pre span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-secundaria);
+}

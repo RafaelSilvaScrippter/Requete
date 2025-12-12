@@ -27,12 +27,6 @@
   cursor: pointer;
 }
 
-.secao-queries {
-  background-color: var(--color-p08);
-  height: 60vh;
-  overflow: scroll;
-}
-
 .grid-main {
   display: grid;
   grid-template-columns: 200px auto;
@@ -44,9 +38,6 @@
   height: 40vh;
 }
 
-.secao-queries {
-  display: grid;
-}
 .btn-run {
   margin-right: 24px;
   margin-bottom: 20px;
