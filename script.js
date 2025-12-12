@@ -1,6 +1,6 @@
-import editorDeCodigo from "./js/editorCode.js";
-editorDeCodigo();
+import { editorCode } from "./js/codeEditor.js";
 import { tolltip } from "./js/tooltip.js";
-tolltip();
-import { palavrasChave } from "./js/palavrasChave.js";
-palavrasChave();
+window.addEventListener("DOMContentLoaded", () => {
+  editorCode();
+  tolltip();
+});

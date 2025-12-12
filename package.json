@@ -24,6 +24,7 @@
     "cacheable-lookup": "^5.0.4",
     "cacheable-request": "^7.0.4",
     "clone-response": "^1.0.3",
+    "codemirror": "^5.65.20",
     "debug": "^4.4.3",
     "decompress-response": "^6.0.0",
     "defer-to-connect": "^2.0.1",
