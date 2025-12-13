@@ -80,6 +80,7 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
+    "@types/node": "^25.0.1",
     "electron": "^39.2.6"
   }
 }
