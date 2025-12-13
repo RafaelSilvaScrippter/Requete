@@ -1,3 +1,6 @@
+import { editorCode } from "./codeEditor.js";
+import { temaPreferencia } from "./preferenciaTema.js";
+
 export function modal() {
   const dataBtnModal = document.querySelector("[data-btn-modal]");
   const dataModalContainer = document.querySelector("[data-modal-container]");
@@ -14,8 +17,14 @@ export function modal() {
 
   dataBtnModal.addEventListener("click", (e) => {
     if (fileInput.value.length > 0) {
+      temaPreferencia();
       dataModalContainer.classList.add("remove-modal");
+      editorCode();
     } else {
+      const spanErro = document.querySelector("[data-erro-span]");
+      if (spanErro) {
+        spanErro.remove();
+      }
       messageErro();
     }
   });

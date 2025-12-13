@@ -1,6 +1,10 @@
 export function editorCode() {
   var myTextArea = document.getElementById("data-editor");
 
+  let valorTema;
+
+  valorTema = window.localStorage.getItem("thema");
+
   var editor = CodeMirror.fromTextArea(myTextArea, {
     lineNumbers: true,
     extraKeys: {
@@ -8,7 +12,7 @@ export function editorCode() {
     },
 
     mode: "text/x-sql",
-    theme: "darcula",
+    theme: valorTema,
     lineWrapping: false,
   });
 }
