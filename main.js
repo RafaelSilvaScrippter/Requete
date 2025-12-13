@@ -1,5 +1,20 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const { servidor } = require("./server/uploadArquivo.mjs");
+const sqlite3 = require("sqlite3").verbose();
+let db = new sqlite3.Database("./db/db.sqlite");
+
+console.log(db);
+ipcMain.handle("db-query", async (event, query) => {
+  return new Promise((resolve, reject) => {
+    db.all(query, (err, rows) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(rows);
+      }
+    });
+  });
+});
 
 const createWindow = () => {
   servidor();
