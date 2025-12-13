@@ -1,11 +1,12 @@
+let myTextArea = document.getElementById("data-editor");
+let editor;
+let valorDoEditor;
 export function editorCode() {
-  var myTextArea = document.getElementById("data-editor");
-
   let valorTema;
 
   valorTema = window.localStorage.getItem("thema");
 
-  var editor = CodeMirror.fromTextArea(myTextArea, {
+  editor = CodeMirror.fromTextArea(myTextArea, {
     lineNumbers: true,
     extraKeys: {
       "Ctrl-Space": "autocomplete",
@@ -15,4 +16,15 @@ export function editorCode() {
     theme: valorTema,
     lineWrapping: false,
   });
+  editor.on("change", function (cm) {
+    valorDoEditor = cm.getValue();
+  });
+
+  const dataBtnRun = document.querySelector("[data-btn-run]");
+
+  dataBtnRun.addEventListener("click", getValueEditor);
+
+  function getValueEditor() {
+    console.log(valorDoEditor);
+  }
 }
