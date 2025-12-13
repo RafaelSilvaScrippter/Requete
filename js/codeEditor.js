@@ -1,3 +1,5 @@
+import { getDados } from "./insertQuery.js";
+
 let myTextArea = document.getElementById("data-editor");
 let editor;
 let valorDoEditor;
@@ -25,6 +27,6 @@ export function editorCode() {
   dataBtnRun.addEventListener("click", getValueEditor);
 
   function getValueEditor() {
-    console.log(valorDoEditor);
+    getDados(valorDoEditor);
   }
 }
