@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require("electron");
+const { servidor } = require("./server/uploadArquivo.mjs");
 
 const createWindow = () => {
+  servidor();
   const win = new BrowserWindow({
     width: 1000,
     height: 900,
