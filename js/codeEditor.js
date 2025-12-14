@@ -1,4 +1,4 @@
-import { getDados } from "./insertQuery.js";
+import { showDados } from "./showDados.js";
 
 let myTextArea = document.getElementById("data-editor");
 let editor;
@@ -22,12 +22,10 @@ export function editorCode() {
     valorDoEditor = cm.getValue();
   });
 
-  const dataBtnRun = document.querySelector("[data-btn-run]");
-
   document
     .querySelector("[data-btn-run]")
     .addEventListener("click", async () => {
       const dados = await window.api.getDados(valorDoEditor);
-      console.log(dados);
+      showDados(dados);
     });
 }

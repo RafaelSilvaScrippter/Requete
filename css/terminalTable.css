@@ -1,0 +1,15 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  padding-top: 40px;
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+tr {
+  color: #000;
+  border: 1px solid var(--color-p05);
+  text-align: left;
+  padding: 14px 24px;
+}
