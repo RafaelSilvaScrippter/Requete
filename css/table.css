@@ -1,0 +1,16 @@
+.ativo {
+  position: relative;
+  gap: 4px;
+}
+
+.ativo::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  padding: 0.02rem;
+  right: 8px;
+  position: absolute;
+  display: block;
+  background-color: var(--color-s05);
+}
