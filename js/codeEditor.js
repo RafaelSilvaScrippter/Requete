@@ -24,9 +24,10 @@ export function editorCode() {
 
   const dataBtnRun = document.querySelector("[data-btn-run]");
 
-  dataBtnRun.addEventListener("click", getValueEditor);
-
-  function getValueEditor() {
-    getDados(valorDoEditor);
-  }
+  document
+    .querySelector("[data-btn-run]")
+    .addEventListener("click", async () => {
+      const dados = await window.api.getDados(valorDoEditor);
+      console.log(dados);
+    });
 }

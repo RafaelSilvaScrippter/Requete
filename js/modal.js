@@ -1,6 +1,6 @@
 import { editorCode } from "./codeEditor.js";
-import { createFile } from "./criarFile.js";
 import { temaPreferencia } from "./preferenciaTema.js";
+import { showTables } from "./showTables.js";
 
 export function modal() {
   const dataBtnModal = document.querySelector("[data-btn-modal]");
@@ -21,9 +21,9 @@ export function modal() {
     if (!terminaComSqlite) return;
     if (fileInput.value.length > 0) {
       temaPreferencia();
+      showTables();
       dataModalContainer.classList.add("remove-modal");
       editorCode();
-      createFile(fileInput.files[0]);
     } else {
       const spanErro = document.querySelector("[data-erro-span]");
       if (spanErro) {
