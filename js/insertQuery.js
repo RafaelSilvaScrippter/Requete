@@ -1,5 +1,3 @@
-const { ipcRenderer } = require("electron");
-
 export async function getDados(query) {
   const insertQuery = query;
   if (!query) return;
