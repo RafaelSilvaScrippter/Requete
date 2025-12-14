@@ -31,6 +31,15 @@ ipcMain.handle("db-query", async (event, query) => {
   });
 });
 
+ipcMain.handle("show-data", async (event, tableName) => {
+  return new Promise((resolve, reject) => {
+    db.all(`SELECT * FROM ${tableName}`, (err, rowes) => {
+      if (err) reject(err);
+      else resolve(rowes);
+    });
+  });
+});
+
 ipcMain.handle("show-tables", async () => {
   console.log("db", db);
   if (!db) return;
