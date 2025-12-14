@@ -22,9 +22,8 @@ ipcMain.handle("conectar-banco", async () => {
 });
 
 ipcMain.handle("db-query", async (event, query) => {
+  if (!db) return reject("Banco não conectado");
   return new Promise((resolve, reject) => {
-    if (!db) return reject("Banco não conectado");
-
     db.all(query, (err, rows) => {
       if (err) reject(err);
       else resolve(rows);
