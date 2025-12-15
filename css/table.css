@@ -12,5 +12,6 @@
   right: 8px;
   position: absolute;
   display: block;
+  top: 15px;
   background-color: var(--color-s05);
 }
