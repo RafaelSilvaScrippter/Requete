@@ -9,6 +9,8 @@ export function tabletivada() {
   });
 
   async function addClass() {
+    this.innerHTML = "";
+    this.innerHTML = this.dataset.tableItem;
     const dados = await window.api.showItemTables(this.dataset.tableItem);
     const objectKeys = Object.keys(dados[0]);
 

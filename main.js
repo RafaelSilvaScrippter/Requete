@@ -23,12 +23,19 @@ ipcMain.handle("conectar-banco", async () => {
 
 ipcMain.handle("db-query", async (event, query) => {
   if (!db) return reject("Banco não conectado");
-  return new Promise((resolve, reject) => {
-    db.all(query, (err, rows) => {
-      if (err) reject(err);
-      else resolve(rows);
+  try {
+    const result = await new Promise((resolve, reject) => {
+      db.all(query, (err, rows) => {
+        if (err) {
+          reject(err);
+        } else resolve(rows);
+      });
     });
-  });
+    return result;
+  } catch (erro) {
+    console.log("erro na query", erro);
+    throw new Error("erro na query sql " + erro.message);
+  }
 });
 
 ipcMain.handle("show-data", async (event, tableName) => {

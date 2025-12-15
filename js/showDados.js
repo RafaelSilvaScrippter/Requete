@@ -1,7 +1,11 @@
 export function showDados(dados) {
+  const limparTerminalErro = document.querySelector(
+    "[data-terminal-container]"
+  );
+  limparTerminalErro.innerHTML = "";
+  limparTerminalErro.classList.add("remove-beffore");
   const dataTerminal = document.querySelector("[data-terminal]");
   dataTerminal.innerHTML = "";
-
   if (!dados || dados.length === 0) return;
 
   const keys = Object.keys(dados[0]);

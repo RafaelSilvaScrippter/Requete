@@ -1,3 +1,4 @@
+import { erroMessageQuery } from "./messageErro.js";
 import { showDados } from "./showDados.js";
 
 let myTextArea = document.getElementById("data-editor");
@@ -25,7 +26,11 @@ export function editorCode() {
   document
     .querySelector("[data-btn-run]")
     .addEventListener("click", async () => {
-      const dados = await window.api.getDados(valorDoEditor);
-      showDados(dados);
+      try {
+        const dados = await window.api.getDados(valorDoEditor);
+        showDados(dados);
+      } catch (err) {
+        erroMessageQuery(err);
+      }
     });
 }

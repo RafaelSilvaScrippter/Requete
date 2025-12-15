@@ -8,8 +8,31 @@ table {
 }
 
 tr {
+  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #000;
   border: 1px solid var(--color-p05);
   text-align: left;
   padding: 14px 24px;
+}
+
+.erro-message {
+  padding: 22px;
+  display: flex;
+  align-items: start;
+  gap: 4px;
+  color: #e1ae21;
+  text-transform: uppercase;
+  font-family: var(--font-secundaria);
+  text-transform: uppercase;
+}
+
+.erro-message::before {
+  content: url("../imgs/alertIcon.svg");
+}
+
+.remove-beffore::before {
+  content: none;
 }
