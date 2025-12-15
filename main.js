@@ -41,7 +41,6 @@ ipcMain.handle("show-data", async (event, tableName) => {
 });
 
 ipcMain.handle("show-tables", async () => {
-  console.log("db", db);
   if (!db) return;
   return new Promise((resolve, reject) => {
     db.all(
