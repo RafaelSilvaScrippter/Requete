@@ -5,32 +5,14 @@ import { showTables } from "./showTables.js";
 export function modal() {
   const dataBtnModal = document.querySelector("[data-btn-modal]");
   const dataModalContainer = document.querySelector("[data-modal-container]");
-  const fileInput = document.querySelector("[data-file]");
   const dataInputs = document.querySelector("[data-inputs]");
   let errorFile = false;
 
-  fileInput.addEventListener("change", () => {
-    if (errorFile) {
-      const spanErro = document.querySelector("[data-erro-span]");
-      spanErro.remove();
-    }
-  });
-
   dataBtnModal.addEventListener("click", (e) => {
-    const terminaComSqlite = fileInput.value.endsWith(".sqlite");
-    if (!terminaComSqlite) return;
-    if (fileInput.value.length > 0) {
-      temaPreferencia();
-      showTables();
-      dataModalContainer.classList.add("remove-modal");
-      editorCode();
-    } else {
-      const spanErro = document.querySelector("[data-erro-span]");
-      if (spanErro) {
-        spanErro.remove();
-      }
-      messageErro();
-    }
+    temaPreferencia();
+    showTables();
+    dataModalContainer.classList.add("remove-modal");
+    editorCode();
   });
 
   function messageErro() {
