@@ -77,3 +77,16 @@
 .li-data-item::before {
   content: none;
 }
+
+[data-li-append] {
+  margin-left: 10px;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-li-append] li::before {
+  content: "";
+  background-color: var(--color-p05);
+}
