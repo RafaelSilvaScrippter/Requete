@@ -9,6 +9,6 @@ export async function showTables() {
     li.setAttribute("data-table-item", table.name);
     li.classList.add("li-menu-lateral", "li-tables-item");
     ulSetTables.appendChild(li);
-    tabletivada();
   });
+  tabletivada();
 }
