@@ -20,7 +20,6 @@ export function modal(dbSelecionado, caminhoDb) {
   dbValido();
 
   function mostrarCaminhoDb() {
-    console.log(caminhoDb);
     dataFile.innerHTML = `${caminhoDb}`;
     dataFile.classList.add("db-selecionado");
   }

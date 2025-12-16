@@ -27,6 +27,7 @@ export function editorCode() {
     .querySelector("[data-btn-run]")
     .addEventListener("click", async () => {
       try {
+        if (!valorDoEditor) return;
         const dados = await window.api.getDados(valorDoEditor);
         showDados(dados);
       } catch (err) {
