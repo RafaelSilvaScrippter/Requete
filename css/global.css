@@ -16,5 +16,10 @@
   align-items: start;
   font-size: 12px;
   gap: 8px;
-  text-transform: uppercase;
+}
+
+textarea {
+  height: 50vh;
+  width: 100vw;
+  background-color: var(--color-p12);
 }
