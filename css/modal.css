@@ -83,3 +83,15 @@
   display: block;
   margin-top: 20px;
 }
+
+.db-selecionado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #41ac04;
+  color: #f7f7f7;
+}
+
+.db-selecionado::after {
+  content: url("../imgs/correct.svg");
+}
